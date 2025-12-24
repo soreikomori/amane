@@ -907,7 +907,7 @@ async def ProcessChatQueue():
     except Exception as e:
         WriteToErrorLog("ChatQueue", "Error occurred while processing chat queue: " + str(e))
         print("ChatQueue - Error occurred while processing chat queue: " , str(e))
-        await SendDebugChannelMessage("Error In Chat Queue Process")
+        await SendDebugChannelMessage("Error In Chat Queue Process: " + str(e))
 
 @tree.command(name="register",
     description="Registers you for AP slot",
